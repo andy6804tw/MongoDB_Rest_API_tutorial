@@ -61,11 +61,55 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _express = __webpack_require__(2);
+
+var _express2 = _interopRequireDefault(_express);
+
+var _constants = __webpack_require__(1);
+
+var _constants2 = _interopRequireDefault(_constants);
+
+__webpack_require__(3);
+
+var _middlewares = __webpack_require__(5);
+
+var _middlewares2 = _interopRequireDefault(_middlewares);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const app = (0, _express2.default)();
+
+(0, _middlewares2.default)(app);
+
+app.get('/', (req, res) => {
+  res.send('Hello woeld!');
+});
+
+app.listen(_constants2.default.PORT, err => {
+  if (err) {
+    throw err;
+  } else {
+    console.log(`Server running on port: ${_constants2.default.PORT}
+    ---
+    Running on ${process.env.NODE_ENV}
+    ---
+    Make something great
+    `);
+  }
+});
+
+/***/ }),
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -105,50 +149,6 @@ function envConfig(env) {
 exports.default = Object.assign({}, defaultConfig, envConfig(process.env.NODE_ENV));
 
 /***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _express = __webpack_require__(2);
-
-var _express2 = _interopRequireDefault(_express);
-
-var _constants = __webpack_require__(0);
-
-var _constants2 = _interopRequireDefault(_constants);
-
-__webpack_require__(3);
-
-var _middlewares = __webpack_require__(5);
-
-var _middlewares2 = _interopRequireDefault(_middlewares);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-const app = (0, _express2.default)();
-
-(0, _middlewares2.default)(app);
-
-app.get('/', (req, res) => {
-  res.send('Hello woeld!');
-});
-
-app.listen(_constants2.default.PORT, err => {
-  if (err) {
-    throw err;
-  } else {
-    console.log(`Server running on port: ${_constants2.default.PORT}
-    ---
-    Running on ${process.env.NODE_ENV}
-    ---
-    Make something great
-    `);
-  }
-});
-
-/***/ }),
 /* 2 */
 /***/ (function(module, exports) {
 
@@ -165,7 +165,7 @@ var _mongoose = __webpack_require__(4);
 
 var _mongoose2 = _interopRequireDefault(_mongoose);
 
-var _constants = __webpack_require__(0);
+var _constants = __webpack_require__(1);
 
 var _constants2 = _interopRequireDefault(_constants);
 
@@ -176,12 +176,15 @@ _mongoose2.default.Promise = global.Promise;
 
 // Connect the db with the url provide
 try {
-  _mongoose2.default.connect(_constants2.default.MONGO_URL, { useMongoClient: true });
+  // mongoose.connect(constants.MONGO_URL, { useMongoClient: true }) or following
+  _mongoose2.default.connection.openUri(_constants2.default.MONGO_URL);
 } catch (err) {
   _mongoose2.default.createConnection(_constants2.default.MONGO_URL);
 }
 
-_mongoose2.default.connection.once('open', () => console.log('MongoDB Running')).on('error', e => {
+_mongoose2.default.connection.once('open', () => {
+  return console.log('MongoDB Running');
+}).on('error', e => {
   throw e;
 });
 
