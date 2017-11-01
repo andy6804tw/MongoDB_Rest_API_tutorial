@@ -35,4 +35,4 @@
 - Crypt the user password
 - Create the localStrategy with passport
 - Can log a user
->Mission: 使用bcrypt打亂密碼、rimraf指令移除檔案、passport(middleware)驗證登入
+>Mission: 使用bcrypt打亂密碼、rimraf指令移除檔案、passport(middleware)驗證登入
