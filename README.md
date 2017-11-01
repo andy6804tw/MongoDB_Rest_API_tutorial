@@ -2,7 +2,7 @@
 
 ### Part 1, Setup the tools
 
-[Link](https://github.com/andy6804tw/MongoDB_Rest_API_tutorial/tree/part1)
+[Link](./REAME/part1.md)
 
 - Add mongoose, body-parser, morgan, compression, helmet
 - Setup config folder
@@ -11,7 +11,7 @@
 
 ### Part 2 Setup of the middlewares and mongodb
 
-[Link](https://github.com/andy6804tw/MongoDB_Rest_API_tutorial/tree/part2)
+[Link](./REAME/part2.md)
 
 - Add mongoose, body-parser, morgan, compression, helmet
 - Setup config folder
@@ -20,7 +20,7 @@
 
 ### Part 3, Users creation
 
-[Link](https://github.com/andy6804tw/MongoDB_Rest_API_tutorial/tree/part3)
+[Link](./REAME/part3.md)
 
 - Create the user model, controller and routes
 - Install robomongo, postman
