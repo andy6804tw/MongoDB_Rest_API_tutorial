@@ -18,9 +18,9 @@
 - Setup constants
 >Mission: 建立 middlewares 和安裝 mongodb 環境
 
-# Part 3, Users creation
+### Part 3, Users creation
 
 - Create the user model, controller and routes
 - Install robomongo, postman
 - Add joi for validation with express-validation
->Mission: 建立user資料庫模型、設定user(router、controller)、加入joi驗證
+>Mission: 建立user資料庫模型、設定user(router、controller)、加入joi驗證
