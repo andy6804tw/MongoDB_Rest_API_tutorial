@@ -20,6 +20,8 @@
 
 ### Part 3, Users creation
 
+[Link](https://github.com/andy6804tw/MongoDB_Rest_API_tutorial/tree/part3)
+
 - Create the user model, controller and routes
 - Install robomongo, postman
 - Add joi for validation with express-validation
