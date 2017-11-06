@@ -92,6 +92,7 @@ method: GET
 
 Parameters (headers) :
 ```
+authorization:
 JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1OWZlZDM2MGZiMmVmYTdiNTM5MjcxOGQiLCJpYXQiOjE1MDk4NzI1NDR9.9kYiLoTKVBt7f2VBLkMOhTdhEMjShuJ2YeXjQY5UTIA
 ```
 
