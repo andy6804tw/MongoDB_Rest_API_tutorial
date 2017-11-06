@@ -46,3 +46,12 @@
 - Add jsonswebtoken library
 - How can I send less info to the front end ? Like I don't want to send the password
 >Mission: 使用者登入產生jwt token進入每條api前驗證允許存取該api
+
+### Part 6, Creation of a post
+
+[Link](./README/part6.md)
+
+- Create the post model
+- Add the user id as the author
+- Resolve error I did with joi
+>Mission: 建立post資料表
