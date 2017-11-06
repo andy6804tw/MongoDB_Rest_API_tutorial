@@ -54,7 +54,7 @@
 - Create the post model
 - Add the user id as the author
 - Resolve error I did with joi
->Mission: 建立post資料表
+>Mission: 建立post資料表
 
 ### Part 7, Get a post by his id and get all of them
 
@@ -65,3 +65,11 @@
 - Populate User
 - User toAuthJSON vs toJSON
 >Mission: 利用post id取得貼文資訊,使用http-status library
+
+### Part 8, Get all posts with a list statics method
+
+[Link](./README/part8.md)
+
+- Create the controller post list 
+- Create a list statics method on post
+>Mission: 建立post list使用者可自訂搜尋長度
