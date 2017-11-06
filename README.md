@@ -55,3 +55,13 @@
 - Add the user id as the author
 - Resolve error I did with joi
 >Mission: 建立post資料表
+
+### Part 7, Get a post by his id and get all of them
+
+[Link](./README/part7.md)
+
+- Create the controller, route
+- Add http-status library
+- Populate User
+- User toAuthJSON vs toJSON
+>Mission: 利用post id取得貼文資訊,使用http-status library
