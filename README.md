@@ -73,3 +73,11 @@
 - Create the controller post list 
 - Create a list statics method on post
 >Mission: 建立post list使用者可自訂搜尋長度
+
+### Part 9, Update a post if author of it
+
+[Link](./README/part9.md)
+
+- Create the route and controller
+- Create a validation field
+>Mission: 建立Post文章修改，(使用者修改自己文章 )，並使用Joi

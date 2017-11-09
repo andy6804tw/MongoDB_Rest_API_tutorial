@@ -15,5 +15,10 @@ routes.post(
 )
 routes.get('/:id', postController.getPostById)
 routes.get('/', postController.getPostsList)
-
+routes.patch(
+  '/:id',
+  authJwt,
+  validate(postValidation.updatePost),
+  postController.updatePost,
+)
 export default routes
